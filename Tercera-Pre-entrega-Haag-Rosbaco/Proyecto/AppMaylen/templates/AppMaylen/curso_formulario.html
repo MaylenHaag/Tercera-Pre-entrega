@@ -4,7 +4,7 @@
 
 {% block title %} Formulario - Agregar Curso {% endblock title %}
 
-{% block section %}
+{% block main %}
 
     <form action='/curso_formulario/' method='POST'>
         {% csrf_token %}
@@ -15,5 +15,5 @@
 
     </form>
 
-{% endblock section %}
+{% endblock main %}
 
