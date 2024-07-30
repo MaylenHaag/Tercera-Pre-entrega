@@ -1,0 +1,20 @@
+{% extends "AppMaylen/base.html" %}
+
+{% load static %}
+
+{% block title %} Formulario  con API {% endblock title %}
+
+{% block section %}
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        
+        <table>
+            {{ mi_formulario.as_table }}
+        </table>
+
+        <input type='submit' value='Enviar'>
+
+    </form>
+
+{% endblock section %}
