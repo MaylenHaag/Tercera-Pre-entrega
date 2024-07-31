@@ -1,17 +1,14 @@
 from django.urls import path
-from Proyecto import views
+from .views import index, create_curso, create_estudiante, create_profesor, create_entregable, curso_list, entregable_list, profesor_list, estudiante_list
 
 urlpatterns = [
-    path('', views.inicio, name='Inicio'),
-    path ('cursos/', views.cursos, name='Cursos'),
-    path ('profesores/', views.profesores, name='Profesores'),
-    path ('estudiantes/', views.estudiantes, name='Estudiantes'),
-    path ('entregables/', views.entregables, name='Entregables'),
-] 
-
-clase_21 = [
-    path('curso-formulario/', views.curso_formulario, name='CursoFormulario'),
-    path('form-con-api/', views.form_con_api, name='FormConApi'),
+    path('', index, name='index'),
+    path('crear-curso/', create_curso, name='create_curso'),
+    path('cursos/', curso_list, name='curso_list'),
+    path('crear-estudiante/', create_estudiante, name='create_estudiante'),
+    path('estudiantes/', estudiante_list, name='estudiante_list'),
+    path('crear-profesor/', create_profesor, name='create_profesor'),
+    path('profesores/', profesor_list, name='profesor_list'),
+    path('crear-entregable/', create_entregable, name='create_entregable'),
+    path('entregables/', entregable_list, name='entregable_list'),
 ]
-
-urlpatterns += clase_21
